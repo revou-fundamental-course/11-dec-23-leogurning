@@ -11,7 +11,7 @@
         <img src="assets/testLogo.webp" alt="logo" class="logo"> 
         <ul class="nav-items">
             <li><a href="#home">Home</a></li>
-            <li><a href="#our-profile">Our profile</a></li>
+            <li><a href="./profile.html">Our profile</a></li>
             <li><a href="#facilitations">Facilitations</a></li>
             <li><a href="#message-us-id">Message Us</a></li>
         </ul>
@@ -20,7 +20,7 @@
     <header>
         <hi>Hi <span id="visitor-name"></span>, welcome to our website</hi>
         <h4>Please enjoy</h4>
-        <img src="assets/testHeader.jpeg" alt="img-header" class="img-header">
+        <img src="assets/education-header.jpeg" alt="img-header">
     </header>
     <hr>
     <div id="facilitations">
@@ -55,24 +55,24 @@
         <div class="message-us">
             <div class="form-input">
                 <form action="" name="message-form" onsubmit="return validateForm()">
-                    <label for="full-name">Nama:</label> 
-                    <input type="text" placeholder="Nama" name="full-name">
+                    <label for="fname">Nama:</label> 
+                    <input type="text" placeholder="Nama" id="fname" name="full-name">
                     
-                    <label for="birth-date">Tanggal lahir:</label>  
-                    <input type="date" name="birth-date">
+                    <label for="bdate">Tanggal lahir:</label>  
+                    <input type="date" name="birth-date" id="bdate">
                     <div class="radio-input-wrapped">
-                        <label for="gender">Jenis kelamin:</label>
+                        <label for="gman">Jenis kelamin:</label>
                         <div class="radio-input">
-                            <input type="radio" id="male" name="gender" value="male">
-                            <label for="gender">Laki-laki</label>
+                            <input type="radio" id="gman" name="gender" value="male">
+                            <label for="gman">Laki-laki</label>
                         </div> 
                         <div class="radio-input">
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="gender">Perempuan</label>    
+                            <input type="radio" id="gwoman" name="gender" value="female">
+                            <label for="gwoman">Perempuan</label>    
                         </div>
                     </div>
-                    <label for="messages">Pesan:</label> 
-                    <textarea name="messages" cols="30" rows="10" placeholder="Pesan"></textarea>
+                    <label for="msg">Pesan:</label> 
+                    <textarea name="messages" id="msg" cols="30" rows="10" placeholder="Pesan"></textarea>
                     
                     <input type="submit" value="Submit">
                 </form>

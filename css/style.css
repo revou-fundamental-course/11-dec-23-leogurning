@@ -50,8 +50,9 @@ header {
 
 header img {
     width: 90%;
+    height: 400px;
     margin-bottom: 20px;
-    opacity: 0.2;
+    opacity: 0.6;
     align-items: center;
     border-radius: 6px;
 }
@@ -146,6 +147,55 @@ header img {
     padding: 20px;
     border-radius: 5px;
     margin-left: 20px;
+}
+
+.profile {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    border: 1px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 400px;
+    margin: 10px;
+    text-align: center;
+    font-family: arial;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card .content {
+    color: grey;
+    font-size: 14px;
+    text-align: left;
+    padding: 20px;
+    height: 200px;
+}
+
+.card > img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.card .card-footer {
+    color: white;
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card .card-footer p {
+    background-color: darkblue;
+    margin-bottom: 5px;
 }
 
 footer {
