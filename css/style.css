@@ -7,7 +7,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    border: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .nav-items {
@@ -16,17 +21,46 @@ nav {
 
 .nav-items li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 0.2em;
+    margin-top: 0.6em;
+    float:left;
+}
+
+.nav-items li a {
+    padding: .25em 0.65em 0 0.65em;
+    text-decoration: none; /* no underline */
+    background-color: #EBF5FF;
+    color: #4312AE; /* dark blue */
+    border: 2px solid black;
+    border-top-left-radius: 1em 1em; /* rounded corner! */
+    border-top-right-radius: 1em 1em; /* another rounded corner! */
+}
+
+.nav-items li a:hover, nav ul li a:focus {
+    color: black;
+    background-color: white;
+    font-weight: bold;
 }
 
 header {
     text-align: center;
+    height: 578px;
+    width: 100%;
 }
 
-header image {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 40px;
+header img {
+    width: 90%;
+    margin-bottom: 20px;
+    opacity: 0.2;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1.2rem;
+    margin-bottom: 3rem;
 }
 
 .facilitations {
@@ -42,9 +76,78 @@ header image {
 .circle {
     width: 100px;
     height: 100px;
-    border: 2px solid black;
+    border: 2px solid rgb(74, 69, 69);
     border-radius: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.logo {
+    height: 4.5rem;  
+    width: 4.5rem;  
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.message-us {
+    display: flex;
+    justify-content:space-around;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.message-us .form-input {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 50%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+.message-us .form-input input[type=text], select, textarea, input[type=date] {
+    width: 100%; /* Full width */
+    padding: 12px;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+  
+/* Style the submit button with a specific background color etc */
+.message-us .form-input input[type=submit] {
+    background-color: #3e04aa;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+/* When moving the mouse over the submit button, add a darker green color */
+.message-us .form-input input[type=submit]:hover {
+    background-color: #4583a0;
+}
+
+.message-us .form-input .radio-input-wrapped {
+	margin-bottom: 10px
+}
+
+.message-us .form-input .radio-input {
+  width: 100%;
+  padding: 5px;
+}
+
+.message-us .form-result {
+    border: 1px solid rgb(74, 69, 69);
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: right;
 }

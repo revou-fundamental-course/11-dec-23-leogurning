@@ -7,37 +7,88 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <img src="" alt="logo" class="logo"> 
+    <nav id="home">
+        <img src="assets/testLogo.webp" alt="logo" class="logo"> 
         <ul class="nav-items">
-            <li>Home</li>
-            <li>Our profile</li>
-            <li>Achievement</li>
-            <li>Message Us</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#our-profile">Our profile</a></li>
+            <li><a href="#facilitations">Facilitations</a></li>
+            <li><a href="#message-us-id">Message Us</a></li>
         </ul>
     </nav>
+    <hr>
     <header>
-        <hi>Hi Leon, welcome to our website</hi>
+        <hi>Hi <span id="visitor-name"></span>, welcome to our website</hi>
         <h4>Please enjoy</h4>
-        <img src="" alt="img-header" class="img-header">
+        <img src="assets/testHeader.jpeg" alt="img-header" class="img-header">
     </header>
     <hr>
-    <div class="facilitations">
-        <div>
-            <div 
-                class="circle" 
-                style="background-image: url('assets/circle1.jpg');">
+    <div id="facilitations">
+        <div class="title">
+            <hi>Our Facilitations</hi>
+        </div>
+        <div class="facilitations">
+            <div>
+                <div 
+                    class="circle" 
+                    style="background-image: url('assets/profTeacher.jpeg');">
+                </div>
+                <h4>Profesional Teachers</h4>
             </div>
-            <h4>Football Arena</h4>
-        </div>
-        <div>
-            <div class="circle"></div>
-            <h4>Auditorium</h4>
-        </div>
-        <div>
-            <div class="circle"></div>
-            <h4>Student Canteen</h4>
+            <div>
+                <div class="circle"
+                    style="background-image: url('assets/sportField.jpeg');"></div>
+                <h4>Sport Field</h4>
+            </div>
+            <div>
+                <div class="circle"
+                    style="background-image: url('assets/classroom.jpeg');"></div>
+                <h4>Classroom</h4>
+            </div>
         </div>
     </div>
+    <hr>
+    <div id="message-us-id">
+        <div class="title">
+            <hi>Message Us</hi>
+        </div>
+        <div class="message-us">
+            <div class="form-input">
+                <form action="" name="message-form" onsubmit="return validateForm()">
+                    <label for="full-name">Nama:</label> 
+                    <input type="text" placeholder="Nama" name="full-name">
+                    
+                    <label for="birth-date">Tanggal lahir:</label>  
+                    <input type="date" name="birth-date">
+                    <div class="radio-input-wrapped">
+                        <label for="gender">Jenis kelamin:</label>
+                        <div class="radio-input">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="gender">Laki-laki</label>
+                        </div> 
+                        <div class="radio-input">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="gender">Perempuan</label>    
+                        </div>
+                    </div>
+                    <label for="messages">Pesan:</label> 
+                    <textarea name="messages" cols="30" rows="10" placeholder="Pesan"></textarea>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>        
+            <div class="form-result">
+                <p>Nama: <span id="sender-full-name"></span></p>
+                <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+                <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                <p>Pesan: <span id="sender-messages"></span></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p>Created by Leon School</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
