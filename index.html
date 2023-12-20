@@ -7,53 +7,96 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav id="home">
-        <img src="assets/testLogo.webp" alt="logo" class="logo"> 
-        <ul class="nav-items">
-            <li><a href="#home">Home</a></li>
-            <li><a href="./profile.html">Our profile</a></li>
-            <li><a href="#facilitations">Facilitations</a></li>
-            <li><a href="#message-us-id">Message Us</a></li>
-        </ul>
-    </nav>
-    <hr>
-    <header>
-        <hi>Hi <span id="visitor-name"></span>, welcome to our website</hi>
-        <h4>Please enjoy</h4>
-        <img src="assets/education-header.jpeg" alt="img-header">
+    <header class="header-wrapper" id="home_id">
+        <img src="assets/testLogo.webp" alt="logo" class="logo">
+        <div class="menu">
+            <button><a href="#home_id">Home</a></button>
+            <button><a href="#profile-id">Our Profile</a></button>
+            <button ><a href="#facilitations-id">Facilitations</a></button>
+            <button><a href="#message-us-id">Message Us</a></button>
+        </div>
     </header>
-    <hr>
-    <div id="facilitations">
-        <div class="title">
-            <hi>Our Facilitations</hi>
+    <main class="main-content">
+        <h3>Hi <span id="visitor-name"></span>, Welcome to Website</h3>
+        <div>
+            <img class="img-slideshow" 
+                src="https://source.unsplash.com/random/1080x400?school&sig=1"
+            />
+            <img class="img-slideshow" 
+                src="https://source.unsplash.com/random/1080x400?school&sig=2"
+            />
+            <img class="img-slideshow" 
+                src="https://source.unsplash.com/random/1080x400?school&sig=3"
+            />
         </div>
-        <div class="facilitations">
-            <div>
-                <div 
-                    class="circle" 
-                    style="background-image: url('assets/profTeacher.jpeg');">
+        <hr>
+        <div id="profile-id">
+            <div class="title">
+                <h1>Our Profile</h1>
+            </div>
+            <div class="profile">
+                <div class="profile-section">
+                    <img src="assets/mission.png" alt="Mission">
+                    <div class="content">
+                        <p>Our Mission is Morbi ut cursus elit. Suspendisse id hendrerit turpis, vestibulum sollicitudin erat. Phasellus felis lacus, laoreet ac nisl nec, eleifend gravida mi.</p>
+                    </div>                
+                    <div class="card-footer">
+                        <p>Mission</p>
+                    </div>
                 </div>
-                <h4>Profesional Teachers</h4>
-            </div>
-            <div>
-                <div class="circle"
-                    style="background-image: url('assets/sportField.jpeg');"></div>
-                <h4>Sport Field</h4>
-            </div>
-            <div>
-                <div class="circle"
-                    style="background-image: url('assets/classroom.jpeg');"></div>
-                <h4>Classroom</h4>
+                <div class="profile-section">
+                    <img src="assets/vision.png" alt="Vision">
+                    <div class="content">
+                        <p>Our Vision is Morbi ut cursus elit.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Vision</p>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <img src="assets/values.png" alt="Values">
+                    <div class="content">
+                        <p>Our Values is Morbi ut cursus elit. Integer eget mattis erat, eget vulputate sem. Sed quam enim, sagittis eget ullamcorper sed, laoreet ac mauris.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Values</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
-    <div id="message-us-id">
-        <div class="title">
-            <hi>Message Us</hi>
+        <hr>
+        <div id="facilitations-id">
+            <div class="title">
+                <h1>Our Facilitations</h1>
+            </div>
+            <div class="facilitations">
+                <div class="facilitations-item">
+                    <div 
+                        class="circle" 
+                        style="background-image: url('assets/profTeacher.jpeg');">
+                    </div>
+                    <h4>Profesional Teachers</h4>
+                </div>
+                <div class="facilitations-item">
+                    <div class="circle"
+                        style="background-image: url('assets/sportField.jpeg');"></div>
+                    <h4>Sport Field</h4>
+                </div>
+                <div class="facilitations-item">
+                    <div class="circle"
+                        style="background-image: url('assets/classroom.jpeg');"></div>
+                    <h4>Classroom</h4>
+                </div>
+            </div>
         </div>
-        <div class="message-us">
-            <div class="form-input">
+
+        <hr>
+        <div id="message-us-id">
+            <div class="title">
+                <h1>Message Us</h1>
+            </div>
+            <div class="form-section">
+
                 <form action="" name="message-form" onsubmit="return validateForm()">
                     <label for="fname">Nama:</label> 
                     <input type="text" placeholder="Nama" id="fname" name="full-name">
@@ -76,15 +119,16 @@
                     
                     <input type="submit" value="Submit">
                 </form>
-            </div>        
-            <div class="form-result">
-                <p>Nama: <span id="sender-full-name"></span></p>
-                <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
-                <p>Jenis Kelamin: <span id="sender-gender"></span></p>
-                <p>Pesan: <span id="sender-messages"></span></p>
+                       
+                <div class="form-result">
+                    <p>Nama: <span id="sender-full-name"></span></p>
+                    <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                    <p>Pesan: <span id="sender-messages"></span></p>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <hr>
     <footer>
         <p>Created by Leon School</p>

@@ -1,60 +1,82 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-.nav-items {
-    list-style-type: none;
-}
-
-.nav-items li {
-    display: inline;
-    margin-right: 0.2em;
-    margin-top: 0.6em;
-    float:left;
-}
-
-.nav-items li a {
-    padding: .25em 0.65em 0 0.65em;
-    text-decoration: none; /* no underline */
-    background-color: #EBF5FF;
-    color: #4312AE; /* dark blue */
-    border: 2px solid black;
-    border-top-left-radius: 1em 1em; /* rounded corner! */
-    border-top-right-radius: 1em 1em; /* another rounded corner! */
-}
-
-.nav-items li a:hover, nav ul li a:focus {
-    color: black;
-    background-color: white;
-    font-weight: bold;
-}
-
-header {
-    text-align: center;
-    height: 578px;
-    width: 100%;
-}
-
-header img {
-    width: 90%;
-    height: 400px;
-    margin-bottom: 20px;
-    opacity: 0.6;
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 6px;
+    border-bottom: 2px solid black;
+    padding: 16px 24px;
+}
+
+.header-wrapper > .menu {
+    display: flex;
+}
+
+.header-wrapper > .menu > button {
+    background-color: #3e04aa;
+    padding: 8px 16px;
+    border: 1px solid grey;
+    cursor: pointer;
+    margin-right: 2px;
+    transition: 0.3s background-color ease-out;
+}
+
+.header-wrapper > .menu > button:hover {
+    background-color: #4583a0;
+    color: black;
+}
+
+.header-wrapper > .menu > button:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.header-wrapper > .menu > button:last-child {
+    border-radius: 0 4px 4px 0;
+    margin-right: 0;
+}
+
+.header-wrapper > .logo {
+    height: 4.5rem;  
+    width: 4.5rem;  
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.main-content {
+    padding: 24px;
+}
+
+.main-content .form-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.main-content .form-section form {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.main-content .form-section .form-result {
+    width: 100%;
+    border: 1px solid rgb(74, 69, 69);
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.img-slideshow {
+    width: 100%;
 }
 
 .title {
@@ -64,17 +86,21 @@ header img {
     margin-bottom: 3rem;
 }
 
-.facilitations {
+.main-content .facilitations {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 40px;
+    align-items: center;
 }
 
-.facilitations div {
-    text-align: center;
+.main-content .facilitations .facilitations-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.circle {
+.main-content .facilitations .facilitations-item .circle {
     width: 100px;
     height: 100px;
     border: 2px solid rgb(74, 69, 69);
@@ -84,29 +110,8 @@ header img {
     background-size: cover;
 }
 
-.logo {
-    height: 4.5rem;  
-    width: 4.5rem;  
-    border: 2px solid black;
-    border-radius: 50%;
-    margin: 5px;
-}
-
-.message-us {
-    display: flex;
-    justify-content:space-around;
-    text-align: left;
-    margin-bottom: 2rem;
-}
-.message-us .form-input {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    width: 50%;
-}
-
 /* Style inputs with type="text", select elements and textareas */
-.message-us .form-input input[type=text], select, textarea, input[type=date] {
+.main-content .form-section input[type=text], select, textarea, input[type=date] {
     width: 100%; /* Full width */
     padding: 12px;
     border: 1px solid #ccc; /* Gray border */
@@ -118,7 +123,7 @@ header img {
 }
   
 /* Style the submit button with a specific background color etc */
-.message-us .form-input input[type=submit] {
+.main-content .form-section input[type=submit] {
     background-color: #3e04aa;
     color: white;
     padding: 12px 20px;
@@ -128,35 +133,31 @@ header img {
 }
   
 /* When moving the mouse over the submit button, add a darker green color */
-.message-us .form-input input[type=submit]:hover {
+.main-content .form-section input[type=submit]:hover {
     background-color: #4583a0;
 }
 
-.message-us .form-input .radio-input-wrapped {
+.main-content .form-section .radio-input-wrapped {
 	margin-bottom: 10px
 }
 
-.message-us .form-input .radio-input {
+.main-content .form-section .radio-input {
   width: 100%;
   padding: 5px;
 }
 
-.message-us .form-result {
-    border: 1px solid rgb(74, 69, 69);
-    width: 50%;
-    padding: 20px;
-    border-radius: 5px;
-    margin-left: 20px;
-}
-
 .profile {
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px;
 }
 
-.card {
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 250px;
     height: 400px;
@@ -164,12 +165,9 @@ header img {
     text-align: center;
     font-family: arial;
     border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
-.card .content {
+.profile-section .content {
     color: grey;
     font-size: 14px;
     text-align: left;
@@ -177,7 +175,7 @@ header img {
     height: 200px;
 }
 
-.card > img {
+.profile-section > img {
     width: 100%;
     height: 150px;
     margin-bottom: 20px;
@@ -186,18 +184,66 @@ header img {
     opacity: 1;
 }
 
-.card .card-footer {
+.profile-section .card-footer {
     color: white;
     height: 30px;
     text-align: center;
     margin-top: 10px;
 }
 
-.card .card-footer p {
+.profile-section .card-footer p {
     background-color: darkblue;
     margin-bottom: 5px;
 }
 
 footer {
     text-align: right;
+}
+
+@media only screen and (max-width: 620px ) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header-wrapper > .menu > button {
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+    .header-wrapper > .menu > button:first-child {
+        border-radius: 4px 4px 0 0;
+        margin-right: 0;
+    }
+    
+    .header-wrapper > .menu > button:last-child {
+        border-radius: 0 0 4px 4px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .logo {
+        margin-bottom: 14px;
+    }
+
+    .main-content .form-section {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .main-content .form-section .form-result {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .main-content .facilitations {
+        flex-direction: column;
+    }
+
+    .main-content .profile {
+        flex-direction: column;
+    }
 }
