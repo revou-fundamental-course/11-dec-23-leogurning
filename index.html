@@ -75,7 +75,7 @@
                         class="circle" 
                         style="background-image: url('assets/profTeacher.jpeg');">
                     </div>
-                    <h4>Profesional Teachers</h4>
+                    <h4>Profesional<br>Teachers</h4>
                 </div>
                 <div class="facilitations-item">
                     <div class="circle"
@@ -99,10 +99,10 @@
 
                 <form action="" name="message-form" onsubmit="return validateForm()">
                     <label for="fname">Nama:</label> 
-                    <input type="text" placeholder="Nama" id="fname" name="full-name">
+                    <input type="text" placeholder="Nama" id="fname" name="full-name" required>
                     
                     <label for="bdate">Tanggal lahir:</label>  
-                    <input type="date" name="birth-date" id="bdate">
+                    <input type="date" name="birth-date" id="bdate" max="2023-12-01">
                     <div class="radio-input-wrapped">
                         <label for="gman">Jenis kelamin:</label>
                         <div class="radio-input">
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <label for="msg">Pesan:</label> 
-                    <textarea name="messages" id="msg" cols="30" rows="10" placeholder="Pesan"></textarea>
+                    <textarea name="messages" id="msg" cols="30" rows="10" placeholder="Pesan" required></textarea>
                     
                     <input type="submit" value="Submit">
                 </form>

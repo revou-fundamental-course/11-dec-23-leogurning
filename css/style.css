@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -88,7 +92,7 @@ a {
 
 .main-content .facilitations {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     margin-top: 40px;
     align-items: center;
 }
@@ -148,7 +152,7 @@ a {
 
 .profile {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     border: 1px;
 }
@@ -185,14 +189,9 @@ a {
 }
 
 .profile-section .card-footer {
-    color: white;
+    color: black;
     height: 30px;
     text-align: center;
-    margin-top: 10px;
-}
-
-.profile-section .card-footer p {
-    background-color: darkblue;
     margin-bottom: 5px;
 }
 

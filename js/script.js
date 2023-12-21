@@ -1,9 +1,34 @@
-function setName(pname) {
-    document.getElementById('visitor-name').innerHTML = pname;
+function setName() {
+    let visitorName = prompt("Halo, siapa nama anda?", "")
+    if (visitorName) {
+        document.getElementById('visitor-name').innerHTML = visitorName;    
+    } else {
+        document.getElementById('visitor-name').innerHTML = "No Name";
+    }    
 }
 
-let visitorName = prompt("Halo, siapa nama anda?", "")
-setName(visitorName);
+setName();
+
+//Limit the date input to avoid future date
+function limitBirthDateInput(inputName) {
+    var input = document.forms["message-form"][inputName];
+    var today = new Date();
+    var day = today.getDate();
+
+    // Set month to string to add leading 0
+    var mon = new String(today.getMonth()+1); //January is 0!
+    var yr = today.getFullYear();
+
+    if(mon.length < 2) { mon = "0" + mon; }
+    if(day.length < 2) { day = "0" + day; }
+
+    var date = new String( yr + '-' + mon + '-' + day );
+
+    input.disabled = false; 
+    input.setAttribute('max', date);
+}
+
+limitBirthDateInput("birth-date");
 
 function validateForm() {
     const name = document.forms["message-form"]["full-name"].value;
@@ -14,7 +39,7 @@ function validateForm() {
     } else if (gender === 'female') {
         gender = "Perempuan";
     } else {
-        gender = "Tidak Terdefinisi";
+        gender = "";
     }
     
     const messages = document.forms["message-form"]["messages"].value;
